@@ -1,24 +1,87 @@
-	<section id="fh5co-services" data-section="services">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-left">
-					<h2 class=" left-border to-animate">{{ with .Site.Params.services.title }}{{ . | markdownify }}{{ end }}</h2>
-					<div class="row">
-						<div class="col-md-8 subtext to-animate">
-							<h3>{{ with .Site.Params.services.description }}{{ . | markdownify }}{{ end }}</h3>
-						</div>
+<section id="fh5co-services" data-section="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 section-heading text-left">
+				<h2 class="left-border to-animate">{{ with .Site.Params.services.title }}{{ . | markdownify }}{{ end }}</h2>
+				<div class="row">
+					<div class="col-md-12 subtext to-animate">
+						<h3>{{ with .Site.Params.services.description }}{{ . | markdownify }}{{ end }}</h3>
 					</div>
 				</div>
-			</div>
-			<div class="row">
-			{{ range .Site.Params.services.item }}
-				<div class="col-md-6 col-sm-6 fh5co-service to-animate">
-					<i class="icon to-animate-2 {{ .icon | markdownify }}"></i>
-					<h3>{{ .title | markdownify }}</h3>
-					<p>{{ .description | markdownify }}</p>
+				<!-- Add plain text field with a title -->
+				<div class="row">
+					<div class="col-md-12 fh5co-service to-animate">
+						<h3>{{ with .Site.Params.services.subtitle }}{{ . | markdownify }}{{ end }}</h3>
+						<p>{{ with .Site.Params.services.description2 }}{{ . | markdownify }}{{ end }}</p>
+						<table class="table">
+							<thead>
+							  <tr>
+								<th scope="col">Course</th>
+								<th scope="col">Professors</th>
+								<th scope="col">Semester</th>
+								<th scope="col">ECTS</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<th scope="row">Nuclear Option: Product Design, Interaction Design, Development and Learning in Education </th>
+								<td>André Rocha, Tiago Almeida, Miguel Soeiro, Luís Frias</td>
+								<td>Optional, choose 2 of 3* - 1S</td>
+								<td>15 - 2 courses, 7,5 each</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Design Management</th>
+								<td>Nuno Monge, Bernardo Gaeiras</td>
+								<td>1S</td>
+								<td>5</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Physical and Digital Educational Environments</th>
+								<td>Adriana Cardoso, Pedro Mosca, Luís Frias</td>
+								<td>1S</td>
+								<td>5</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Digital Languages Lab</th>
+								<td>André Rocha, André Sier</td>
+								<td>1S</td>
+								<td>5</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Toys, Games, and Educational Resources</th>
+								<td>Tiago Almeida, Miguel Mata Pereira</td>
+								<td>2S</td>
+								<td>5</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Projects Seminar</th>
+								<td>Tiago Almeida, Miguel Mata Pereira, alumni and other invitees</td>
+								<td>2S</td>
+								<td>5</td>
+							  </tr>
+							  <tr>
+								<th scope="row">Design of Interactive Products for Education</th>
+								<td>André Rocha, Miguel Soeiro, Luís Frias, André Sier, Madalena Matoso</td>
+								<td>2S</td>
+								<td>20</td>
+							  </tr>
+							</tbody>
+						  </table>
+					</div>
 				</div>
-				<div class="clearfix visible-sm-block"></div>
-			{{ end }}
+				<!-- End of plain text field -->
 			</div>
+			
 		</div>
-	</section>
+		<!-- <div class="row">
+		{{ range .Site.Params.services.item }}
+			<div class="col-md-6 col-sm-6 fh5co-service to-animate">-->
+				<!-- <i class="icon to-animate-2 {{ .icon | markdownify }}"></i> -->
+				<!-- <h3>{{ .title | markdownify }}</h3>
+				<p>{{ .description | markdownify }}</p>
+			</div>
+			<div class="clearfix visible-sm-block"></div>
+		{{ end }}
+		</div> -->
+	</div>
+</section>
